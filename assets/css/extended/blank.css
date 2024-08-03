@@ -1,0 +1,54 @@
+/* 设置一些自定义的样式 */
+:root {
+  --link-color: #a8e6cf;
+}
+
+.dark {
+  /* 首页的介绍处的链接 */
+  .entry-content {
+    a {
+      color: var(--link-color);
+    }
+  }
+  /* 文章(post)中的链接 */
+  .post-content {
+    a {
+      color: var(--link-color);
+    }
+  }
+
+  /* 这里要重启 server 才能看到效果 */
+  .pagination a {
+    background: rgb(168, 168, 242);
+  }
+}
+
+.pagination a {
+  background: rgb(80, 104, 81);
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.post-content pre,
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.toc details[open] summary {
+  cursor: pointer;
+}
+
+.toc details summary {
+  cursor: pointer;
+}
+
+/* 评论的样式自定义 */
+#tw-comment {
+  margin-top: 3rem;
+}

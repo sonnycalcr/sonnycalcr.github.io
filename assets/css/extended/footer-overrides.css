@@ -1,0 +1,6 @@
+/* 移动设备中应该隐藏掉 scroll-to-top de 按钮 */
+@media (width < 600px) {
+  #top-link {
+    display: none;
+  }
+}

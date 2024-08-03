@@ -1,0 +1,69 @@
+/* from reset */
+::-webkit-scrollbar-track {
+    background: 0 0;
+}
+
+.list:not(.dark)::-webkit-scrollbar-track {
+    background: var(--code-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border: 5px solid var(--theme);
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+.list:not(.dark)::-webkit-scrollbar-thumb {
+    border: 5px solid var(--code-bg);
+}
+
+
+::-webkit-scrollbar:not(.highlighttable, .highlight table, .gist .highlight) {
+    background: var(--theme);
+}
+
+/* from post-single */
+.post-content .highlighttable td .highlight pre code::-webkit-scrollbar {
+    display: none;
+}
+
+/**/
+/* 代码块的滚动条 */
+/**/
+.post-content :not(table) ::-webkit-scrollbar-thumb {
+    border: 2px solid var(--code-block-bg);
+    /*background: rgb(113, 113, 117);*/
+    background: var(--tertiary);
+}
+/* 鼠标悬浮在上面的时候 */
+.post-content :not(table) ::-webkit-scrollbar-thumb:hover {
+    /*background: rgb(163, 163, 165);*/
+    background: var(--secondary);
+}
+
+.gist table::-webkit-scrollbar-thumb {
+    border: 2px solid rgb(255, 255, 255);
+    background: rgb(173, 173, 173);
+}
+
+.gist table::-webkit-scrollbar-thumb:hover {
+    background: rgb(112, 112, 112);
+}
+
+.post-content table::-webkit-scrollbar-thumb {
+    border-width: 2px;
+}
+
+/* from zmedia */
+/* 这里将 min-width 设置得尽量小一点，是为了防止在移动端的滚动条的样式失效 */
+@media screen and (min-width: 100px) {
+
+    /* reset */
+    ::-webkit-scrollbar {
+        width: 19px;
+        height: 11px;
+    }
+}
