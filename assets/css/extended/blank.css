@@ -62,3 +62,12 @@ code {
     background: rgba(0, 0, 0, 0.5) !important;
   }
 }
+.medium-zoom-image {
+  cursor: url(../../static/cursors/zoom-in.svg) 16 16, zoom-in !important;
+}
+.medium-zoom--opened .medium-zoom-overlay {
+  cursor: url(../../static/cursors/zoom-out.svg), zoom-out !important;
+}
+.medium-zoom-image--opened {
+  cursor: url(../../static/cursors/zoom-out.svg), zoom-out !important;
+}
