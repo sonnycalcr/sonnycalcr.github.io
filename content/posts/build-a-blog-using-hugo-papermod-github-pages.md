@@ -7,6 +7,8 @@ tags = ["博客搭建", "Bilibili"]
 
 ## 前言
 
+之前四五年的时间里也算写过五六百篇博客。以前的 Hexo 顶不住博客数量的压力了，所以，切到 Hugo 试一下。
+
 ### 涉及工具
 
 除了搭建博客和介绍如何使用这个博客框架这样一个流程本身，还包含了对 PaperMod 这个主题的一些细节的定制。
@@ -945,17 +947,32 @@ params:
 
 ![](https://i.postimg.cc/6W87VVSF/image.png)
 
-## 个人认为 PaperMod 做得不好的地方
-
-不好的地方其实挺多的，当然，大部分都可以解决，体验了一把下来，发现 hugo 不仅速度上很优秀，它的耦合度也很低。
-
-但是，就 PaperMod 这个主题而言，目前有一个地方我认为可改可不改，那就是图片的问题，默认的情况下，图片无法点击放大，这一点确实处理得不好，而在 hexo 中，大部分优秀的主题都是可以很好的去放大查看图片的。这个问题理论上来讲是容易解决的，但是在我看来，这并不是一个急迫和非常影响体验的问题，所以，暂时就不去管它。
 
 ----------
+
+## 部署到 Github Pages
+
+这里其实有两种方式，一种是直接建立一个以 `username.github.io` 为名的 Github 仓库，然后，进行部署，另一种是在此基础上新建一个普通的项目，然后可以挂到 `username.github.io` 域名的后面。
+
+我们这里就选用简单的第一种比较直接的方式。
+
+新建一个仓库，没有什么好说的，然后把我们当前的这个仓库和远程仓库关联起来，然后推送过去。然后按照 Hugo 的[文档](https://gohugo.io/hosting-and-deployment/hosting-on-github/)指导来操作即可。
+
+![](https://i.postimg.cc/Tdb4YJDf/image.png)
+
+对于官方给出的 `.github/workflows/hugo.yaml`， 把其中的分支名改一下即可，或者同时把其中的 Hugo 的版本信息改成和本地的一致也可以。之后，每次推送就可以看到 Github 在部署了。
+
+![](https://i.postimg.cc/HdF8b0Jf/image.png)
+
+## 附录
 
 参考：  
 1. <https://pengfeixc.com/blogs/developer-handbook/git-submodules>
 2. [添加 About 页面](https://blog.csdn.net/qq_29102545/article/details/121454974)
 3. [修改字体](https://www.yunyitang.me/hugo-papermod-blog/#%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93)
+4. <https://developer.mozilla.org/en-US/docs/Web/CSS/cursor>
+5. <https://cursor.in/>
+6. <https://github.com/francoischalifour/medium-zoom>
+7. <https://shaohanyun.top/posts/env/hugo_mathjax/>
 
 

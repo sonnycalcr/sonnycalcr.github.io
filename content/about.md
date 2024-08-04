@@ -25,6 +25,6 @@ summary: about
 
 <br>
 
-最后，这个人还活着。
+最后，我有一个[朋友](https://github.com/fanlumaster)。
 
 
