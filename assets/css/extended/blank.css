@@ -74,3 +74,14 @@ code {
     cursor: url(../../static/cursors/zoom-out.svg), default !important;
   }
 }
+
+/* 去掉文章页面底部的上一页和下一页中链接文字的下划线，这东西浏览器审查元素捕捉不到，不知道为啥 */
+.paginav span:hover:not(.title) {
+  box-shadow: none;
+}
+/* 下一页的那里的内边距调节 */
+.paginav {
+  a {
+    padding-bottom: 0.5em;
+  }
+}
