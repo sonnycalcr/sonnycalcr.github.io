@@ -1,0 +1,19 @@
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" -->
+<!--   integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S+Yti0U7QtuZvQ==" -->
+<!--   crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js"
+  integrity="sha512-9ZKhgaFdKlsELap/dGw3Iaz5Bj+Las0XXZiRKYZaN9QArg6FtkD5rULNmNH4rTCTFxjPiBGr3MX8smRADRorDA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const images = Array.from(document.querySelectorAll(".post-content img"));
+  images.forEach(img => {
+    mediumZoom(img, {
+      margin: 1, /* The space outside the zoomed image */ /* 留一点余地，防止在有些情况下，计算四舍五入导致的图片放大稍微超过窗口大小，然后会露出丑陋的横向滚动框 */
+      // scrollOffset: 40, /* The number of pixels to scroll to close the zoom */
+      container: null, /* The viewport to render the zoom in */
+      template: null, /* The template element to display on zoom */
+      // background: 'rgba(0, 0, 0, 0.5)'
+    });
+  });
+</script>

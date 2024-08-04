@@ -52,3 +52,13 @@ code {
 #tw-comment {
   margin-top: 3rem;
 }
+
+/* medium-zoom 图片放大后的背景样式 */
+.medium-zoom-overlay {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+.dark {
+  .medium-zoom-overlay {
+    background: rgba(0, 0, 0, 0.5) !important;
+  }
+}
