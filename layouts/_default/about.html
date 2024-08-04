@@ -1,17 +1,25 @@
 {{- define "main" }}
- 
+
 <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{- if .Description }}
-    <div class="post-description">
-      {{ .Description }}
-    </div>
-    {{- end }}
-  </header>
- 
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+</header>
+
 <section>
   <br>
   {{ .Content }}
 </section>
- 
+
+<style>
+  .main {
+    a {
+      color: var(--link-color);
+    }
+  }
+</style>
+
 {{- end }}{{/* end main */}}

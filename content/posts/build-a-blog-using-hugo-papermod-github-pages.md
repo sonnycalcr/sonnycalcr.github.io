@@ -964,6 +964,13 @@ params:
 
 ![](https://i.postimg.cc/HdF8b0Jf/image.png)
 
+## 一些常用的 Hugo 命令
+
+其实可能只有两个需要我们去记忆或者说熟悉，
+
+- `hugo new posts/xxxxx.md`
+- `hugo server`
+
 ## 附录
 
 参考：  
