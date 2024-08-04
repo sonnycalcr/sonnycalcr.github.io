@@ -53,7 +53,7 @@ hugo version
 
 看到类似下面的输出，就说明安装成功了，
 
-![](https://i.postimg.cc/Z5w2nnQr/image.png)
+![](https://i.postimg.cc/Sm4hZz7t/image.png)
 
 ## 使用
 
@@ -67,7 +67,7 @@ hugo version
 hugo new site SonnyCalcr
 ```
 
-![](https://i.postimg.cc/GtYNMjqR/image.png)
+![](https://i.postimg.cc/cx5SL93v/image.png)
 
 然后，
 
@@ -78,7 +78,7 @@ tree . /f
 
 可以看到默认创建的一些文件和目录，
 
-![](https://i.postimg.cc/26PhxsHH/image.png)
+![](https://i.postimg.cc/M6G5zx18/image.png)
 
 然后，我们先将此目录初始化成 git 仓库，
 
@@ -88,7 +88,7 @@ git add .
 git commit -m "first commit"
 ```
 
-![](https://i.postimg.cc/VvQ0tj6p/image.png)
+![](https://i.postimg.cc/Zb081Hhb/image.png)
 
 ### 添加 PaperMod 主题
 
@@ -96,11 +96,11 @@ git commit -m "first commit"
 git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 ```
 
-![](https://i.postimg.cc/c17wyb6n/image.png)
+![](https://i.postimg.cc/5JT3vcVn/image.png)
 
 可以看到，这个命令执行完之后新增的内容，其实就是往 thems 目录下添加了一个主题，而 `.gitmodules` 则是记录了添加的这个主题的模块的信息，
 
-![](https://i.postimg.cc/m25r0Y39/image.png)
+![](https://i.postimg.cc/2rzBLTV0/image.png)
 
 然后，我们可以再看 PaperMod 这个主题里面都有些什么文件，从下面的命令的输出可以看到，基本上就是一些 html、css 和 js 文件，毕竟是主题嘛，
 
@@ -268,7 +268,7 @@ C:\HDISK\HUGO\SONNYCALCR\THEMES\PAPERMOD
 
 然后，可以添加一下 `.gitignore` 文件，我这里就直接照抄 PaperMod 的作者部署的那个网站的文件了，
 
-![](https://i.postimg.cc/2yvfMWCQ/image.png)
+![](https://i.postimg.cc/byVNG0MB/image.png)
 
 ```txt
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
@@ -392,7 +392,7 @@ summary: archives
 ---
 ```
 
-![](https://i.postimg.cc/c1KJYsKW/image.png)
+![](https://i.postimg.cc/xQ5Nw8nX/image.png)
 
 #### 配置分类和标签
 
@@ -431,7 +431,7 @@ placeholder: "搜索"
 ---
 ```
 
-![](https://i.postimg.cc/XYq1NDHs/image.png)
+![](https://i.postimg.cc/4sbD5DzR/image.png)
 
 然后是搜索的一些个性化设置，
 
@@ -489,7 +489,7 @@ summary: about
 这里就可以写一些关于的相关信息了。
 ```
 
-![](https://i.postimg.cc/5NNnpRVf/image.png)
+![](https://i.postimg.cc/CYbXh3rn/image.png)
 
 ### 配置评论
 
@@ -549,11 +549,11 @@ summary: about
 </script>
 ```
 
-![](https://i.postimg.cc/rFmN5R1m/image.png)
+![](https://i.postimg.cc/k9NY3xDx/image.png)
 
 然后，根据 giscus 官网的[指导](https://giscus.app/zh-CN)，最后生成一份代码，
 
-![](https://i.postimg.cc/g09y9MfX/image.png)
+![](https://i.postimg.cc/9c0L7Kbp/image.png)
 
 然后，把相应的字段提取到配置中，
 
@@ -576,7 +576,7 @@ params:
     crossorigin: "anonymous"
 ```
 
-![](https://i.postimg.cc/JnMb0s7R/image.png)
+![](https://i.postimg.cc/5xFpPzZQ/image.png)
 
 这样就可以正常使用了。
 
@@ -624,7 +624,7 @@ code.has-jax {
 </style>
 ```
 
-![](https://i.postimg.cc/xjsKjjwS/image.png)
+![](https://i.postimg.cc/X3Wx8pxX/image.png)
 
 另一个是 `layouts\partials` 下的 `extend_head.html` 文件，
 
@@ -636,7 +636,7 @@ code.has-jax {
 {{- /* Head custom content area end */ -}}
 ```
 
-![](https://i.postimg.cc/vHc54Fyx/image.png)
+![](https://i.postimg.cc/KF5fsxsf/image.png)
 
 到这里，数学公式就可以正常使用了，我们来写一点数学公式试一下，
 
@@ -684,7 +684,7 @@ $$
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 ```
 
-![](https://i.postimg.cc/Hsq8jr3F/image.png)
+![](https://i.postimg.cc/L2XtCfP4/image.png)
 
 然后，新建一个 `assets\css\extended\blank.css` 文件，添加样式如下，
 
@@ -697,7 +697,7 @@ code {
 }
 ```
 
-![](https://i.postimg.cc/brbDR8wm/image.png)
+![](https://i.postimg.cc/TdNVf3Mv/image.png)
 
 这样就可以生效了，如果发现不生效，可以重新执行一下 `hugo server` 试试。
 
@@ -891,11 +891,11 @@ hugo gen chromastyles --style=tokyonight-day > syntax.css
 }
 ```
 
-![](https://i.postimg.cc/m2stGvDG/image.png)
+![](https://i.postimg.cc/QsB5csZV/image.png)
 
 我在上面提到的生成的样式中空缺的部分，可以看一下下面的样例，
 
-![](https://i.postimg.cc/nhdzBM1H/image.png)
+![](https://i.postimg.cc/LmS1d1YZ/image.png)
 
 要记得把他们的颜色都补上。
 
@@ -924,7 +924,7 @@ markup:
 
 先到 [flaticon](https://www.flaticon.com/) 网站中找一个 icon 图片，然后放到 static 目录下，
 
-![](https://i.postimg.cc/qMDVGKWZ/image.png)
+![](https://i.postimg.cc/6ttWtLcw/image.png)
 
 然后，修改配置，
 
@@ -943,7 +943,7 @@ params:
 
 这个就直接看我的代码仓库就可以了，修改的基本都是 css，代码都在 `assets` 目录下，
 
-![](https://i.postimg.cc/cCN403dc/image.png)
+![](https://i.postimg.cc/6W87VVSF/image.png)
 
 ## 个人认为 PaperMod 做得不好的地方
 
