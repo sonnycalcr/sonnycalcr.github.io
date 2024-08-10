@@ -5,7 +5,7 @@ url: "/about/"
 summary: about
 ---
 
-![天元突破](https://i.postimg.cc/gz618HLt/calcr.png)
+![天元突破](https://i.postimg.cc/7hwBy7VS/calcr.png)
 
 <br>
 
