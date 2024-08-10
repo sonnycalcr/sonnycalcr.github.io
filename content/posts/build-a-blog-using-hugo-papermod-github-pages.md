@@ -456,7 +456,7 @@ params:
 
 #### 配置关于页面
 
-新建两个文件，一个是 `layout\_default` 目录下下的 `about.html`，
+新建两个文件，一个是 `layouts\_default` 目录下下的 `about.html`，
 
 ```html
 {{- define "main" }}
