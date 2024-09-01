@@ -1,9 +1,9 @@
 {
-  "accentColor": "#94e2d5",
-  "cssTheme": "AnuPpuccin",
+  "accentColor": "",
+  "cssTheme": "",
   "interfaceFontFamily": "Microsoft YaHei",
   "textFontFamily": "Microsoft YaHei",
-  "monospaceFontFamily": "Cascadia Code",
+  "monospaceFontFamily": "CaskaydiaCove NF",
   "baseFontSize": 15,
   "translucency": false,
   "showViewHeader": true,
