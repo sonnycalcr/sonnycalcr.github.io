@@ -1,0 +1,14 @@
+{
+  "accentColor": "#94e2d5",
+  "cssTheme": "AnuPpuccin",
+  "interfaceFontFamily": "Microsoft YaHei",
+  "textFontFamily": "Microsoft YaHei",
+  "monospaceFontFamily": "Cascadia Code",
+  "baseFontSize": 15,
+  "translucency": false,
+  "showViewHeader": true,
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "color"
+  ]
+}
