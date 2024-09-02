@@ -55,6 +55,8 @@ Visual Studio 直接在初始界面创建 CMake 项目即可。
 
 ## VSCode 篇
 
+重要程度：**选装**。
+
 来到[VSCode官网界面](https://code.visualstudio.com/download)进行下载。
 
 下载好之后，直接一路下一步，全部按默认的来，因为现在已经 2024 年了，大家的 C 盘没有 1T 也至少 512GB 起步了，不差空间。
@@ -77,6 +79,8 @@ int main(int, char**){
 ```
 
 ## CLion 篇
+
+重要程度：**选装**。
 
 来到[官网](https://www.jetbrains.com/clion/download/#section=windows)下载安装。
 
