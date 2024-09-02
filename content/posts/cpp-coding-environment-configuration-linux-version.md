@@ -1,5 +1,5 @@
 +++
-title = 'Cpp Coding Environment Configuration Linux Version'
+title = 'Linux 系统下的 C++ 编程环境配置'
 date = 2024-09-02T03:54:59+08:00
 categories = []
 tags = ["Bilibili", "C++", "教程"]
