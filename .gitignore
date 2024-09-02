@@ -27,3 +27,4 @@ _testmain.go
 .hugo_build.lock
 resources/_gen/
 /.obsidian/workspace.json
+/.obsidian/plugins/remember-cursor-position/
