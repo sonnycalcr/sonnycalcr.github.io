@@ -88,4 +88,56 @@ int main(int, char**){
 
 之后新建一个项目就可以开始编写代码了。
 
+## Neovim 篇
+
+重要程度：**选装**。
+
+安装 Neovim，
+
+```shell
+scoop install neovim
+```
+
+安装一些常用的软件，
+
+```shell
+scoop install neovide     
+scoop install 7zip        
+scoop install bottom      
+scoop install btop        
+scoop install fastfetch   
+scoop install fd          
+scoop install gitui       
+scoop install grep        
+scoop install gsudo       
+scoop install make        
+scoop install nodejs      
+scoop install ripgrep     
+scoop install starship    
+scoop install vcredist2022
+scoop install which       
+```
+
+然后到 pwsh(即 powershell)复制我的 neovim 配置，
+
+```shell
+git clone https://github.com/fanlumaster/FanyLazyvim.git $env:LOCALAPPDATA\nvim
+```
+
+然后，打开 neovim 等待其自动下载插件，配置一会儿即可。
+
+然后，在 nvim 中使用 mason 安装 clangd，
+
+```shell
+:MasonInstall clangd
+```
+
+这样一来，环境差不多就配置好了。
+
+然后，还可以稍微配置一下 powershell，这里就简单设置一下 starship，
+
+```shell
+Invoke-Expression (&starship init powershell)
+```
+
 
