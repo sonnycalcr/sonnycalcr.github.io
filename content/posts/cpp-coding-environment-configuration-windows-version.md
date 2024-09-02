@@ -140,4 +140,10 @@ git clone https://github.com/fanlumaster/FanyLazyvim.git $env:LOCALAPPDATA\nvim
 Invoke-Expression (&starship init powershell)
 ```
 
+----------
+
+参考：
+
+1、<https://www.lazyvim.org/installation>
+
 
