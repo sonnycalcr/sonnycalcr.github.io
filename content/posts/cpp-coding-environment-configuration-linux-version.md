@@ -81,6 +81,38 @@ yay -S visual-studio-code-bin
 首先，安装一些必要的软件，
 
 ```shell
-nodejs
-npm
+yay -S nodejs
+yay -S npm
+yay -S p7zip
+yay -S bottom
+yay -S fastfetch
+yay -S fd
+yay -S gitui
+yay -S grep
+yay -S ripgrep
+yay -S starship
 ```
+
+然后，在命令行中复制我的 neovim 配置，
+
+```shell
+git clone https://github.com/fanlumaster/lazyvim-archlinux.git ~/.config/nvim
+```
+
+然后，运行 neovim，
+
+```shell
+nvim
+```
+
+然后，在 nvim 中使用 mason 安装 clangd，
+
+```shell
+:MasonInstall clangd
+```
+
+这样一来，环境差不多就配置好了。
+
+对于 Linux 用户，我想对命令行应该都不陌生，所以，就不去讲配置 starship 这种比较简单的操作了。
+
+
