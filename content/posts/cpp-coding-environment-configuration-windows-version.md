@@ -124,7 +124,11 @@ scoop install which
 git clone https://github.com/fanlumaster/FanyLazyvim.git $env:LOCALAPPDATA\nvim
 ```
 
-然后，打开 neovim 等待其自动下载插件，配置一会儿即可。
+然后，打开 neovim 等待其自动下载插件，配置一会儿即可，
+
+```shell
+nvim
+```
 
 然后，在 nvim 中使用 mason 安装 clangd，
 
@@ -135,6 +139,10 @@ git clone https://github.com/fanlumaster/FanyLazyvim.git $env:LOCALAPPDATA\nvim
 这样一来，环境差不多就配置好了。
 
 然后，还可以稍微配置一下 powershell，这里就简单设置一下 starship，
+
+```shell
+nvim $PROFILE
+```
 
 ```shell
 Invoke-Expression (&starship init powershell)
