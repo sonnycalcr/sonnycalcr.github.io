@@ -76,7 +76,7 @@ yay -S visual-studio-code-bin
 
 ![](https://i.postimg.cc/sfD3BqW9/Screenshot-20240902-093513.png)
 
-## neovim
+## Neovim
 
 首先，安装一些必要的软件，
 
