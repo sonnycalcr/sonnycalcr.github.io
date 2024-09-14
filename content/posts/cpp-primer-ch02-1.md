@@ -17,6 +17,8 @@ tags = ["C++ Primer", "Bilibili", "C++", "技术", "读书笔记"]
 
 那么，就直接看代码吧。
 
+说明：代码的命名规范依然以英文原版书中出现的代码的页码为指导原则。
+
 ## Part1 
 
 英文原书 p32,
@@ -196,9 +198,10 @@ int main()
 p37_02,
 
 ```cpp
+// 这里需要看一下中文版 p11 也的练习题第 2 题
 #include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
     for (int i = 10; i >= 0; --i)
         std::cout << i << std::endl;
@@ -244,5 +247,172 @@ int main()
 ```
 
 ## Part3 字面值常量
+
+p38_01,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    int a = 20;   // 十进制
+    int b = 024;  // 八进制
+    int c = 0x14; // 十六进制
+    std::cout << a << ", " << b << ", " << c << std::endl;
+    return 0;
+}
+```
+
+p38_02,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    double a = 3.14159;
+    double b = 3.14159E0;
+    double c = 0.;
+    double d = 0e0;
+    double e = .001;
+    std::cout << a << ", " << b << ", " << c << ", " << d << e << std::endl;
+    return 0;
+}
+```
+
+p39_01,
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main()
+{
+    char a = 'a';
+    std::string b = "Hello World!";
+    std::cout << a << ", " << b << std::endl;
+    return 0;
+}
+```
+
+p39_02,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    // multiline string literal
+    std::cout << "a really, really long string literal "
+                 "that spans two lines" << std::endl;
+    return 0;
+}
+```
+
+p39_03,
+
+```cpp
+#include <cstdio>
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello\nWorld" << std::endl;
+    std::cout << "Name\tAge" << std::endl;
+    std::cout << "\a" << std::endl;
+    std::cout << "Hello\vWorld" << std::endl;
+    std::cout << "Helloo\b World";
+    std::cout << "He said, \"Hello!\"" << std::endl;
+    std::cout << "C:\\Program Files" << std::endl;
+    std::cout << "What\?" << std::endl;
+    std::cout << "It\'s a cat" << std::endl;
+    std::cout << "Hello\rWorld" << std::endl;
+    std::cout << "Hello\fWorld" << std::endl;
+    getchar();
+    return 0;
+}
+```
+
+p39_04,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    std::cout << '\n';      // prints a newline
+    std::cout << "\tHi!\n"; // prints a tab followd by "Hi!" and a newline
+    return 0;
+}
+```
+
+p39_05,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    std::cout << "\7";            // 在一些环境下会发出提示音，和 \a 相同
+    std::cout << "Hello\12World"; // 输出：
+                                  // Hello
+                                  // World
+                                  // 实际效果等同于 \n
+
+    std::cout << "Hello\40World"; // 输出：Hello World （插入一个空格）
+
+    char str[] = "Hello\0World";
+    std::cout << str; // 输出：Hello （由于\0表示字符串结束，World部分不会被输出）
+
+    std::cout << "\115"; // 输出：M
+
+    std::cout << "\x4d"; // 输出：M
+    return 0;
+}
+```
+
+p40_01,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hi \x4dO\115!\n"; // prints Hi MOM! followed by a newline
+    std::cout << '\115' << '\n';    // prints M followed by a newline
+    return 0;
+}
+```
+
+p40_02,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    // 1. L'a' - wide character literal (wchar_t)
+    wchar_t wideChar = L'a';
+    std::wcout << L"Wide character literal: " << wideChar << std::endl;
+
+    // 2. u8"hi!" - UTF-8 string literal
+    const char *utf8String = u8"hi!";
+    std::cout << "UTF-8 string literal: " << utf8String << std::endl;
+
+    // 3. 42ULL - unsigned long long literal
+    unsigned long long ullValue = 42ULL;
+    std::cout << "Unsigned long long literal: " << ullValue << std::endl;
+
+    // 4. 1E-3F - single-precision floating-point literal (float)
+    float floatValue = 1E-3F;
+    std::cout << "Single-precision floating-point literal: " << floatValue << std::endl;
+
+    // 5. 3.14159L - extended-precision floating-point literal (long double)
+    long double longDoubleValue = 3.14159L;
+    std::cout << "Extended-precision floating-point literal: " << longDoubleValue << std::endl;
+
+    return 0;
+}
+```
 
 
