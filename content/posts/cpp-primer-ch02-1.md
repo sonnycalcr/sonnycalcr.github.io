@@ -5,25 +5,37 @@ categories = []
 tags = ["C++ Primer", "Bilibili", "C++", "技术", "读书笔记"]
 +++
 
-这一集视频我们来看一下第二章的第一节。从这一集视频开始，我决定只讲代码。而且基本只讲书上出现过的代码，实在有需要我再自己补充代码。因为基础知识的话，我觉得书上写的已经足够详细了，我再复述一遍没什么太多的意义。
+这一集视频我们来看一下第二章的第一节。从这一集视频开始，我决定只讲代码和我认为需要挑出来讲解的难点/细节，对于难点和细节，我决定以提出问题和解决问题的形式来呈现。关于代码，基本只讲书上出现过的代码，实在有需要我再自己补充代码。毕竟基础知识的话，我觉得书上写的已经足够详细了，我再复述一遍没什么太多的意义，所以，大家看书的话，常看常新呀，总之就是一定要常看。
 
-而代码是更加直观的东西，并且，我们最终都是要去实际地写代码的。所以，我这里将着重去讲解书上出现的每一处代码。
+因为代码是更加直观的东西，并且，我们最终都是要去实际地写代码的。所以，我这里将着重去讲解书上出现的每一处代码，我认为能够理解代码，并且把这些代码实际应用到我们实际的项目中去，这才是真正有意义的事情。
 
-首先看前言部分，
+如果我们能做到完全理解书上的这些代码，做到看到这些代码时心中有底，我觉得那就是胜利。同时，如果习题里面有涉及代码的部分，我们也不会错过。
 
-```cpp
-i = i + j;
-```
+尽量做到：一切都在代码中。这样，如果有人问，你读过这本书吗？我们可以很有底气地说，读过，毕竟，代码全都掌握了，难道还不算读过吗？
 
 这里还要额外多说一点，就是，从这一章开始，我在视频中演示代码所使用的编辑器将换到 neovim + neovide 这样一个组合，然后，在 Windows 平台下，我会使用 pwsh 也就是 powershell 脚本来进行自动化编译和运行，而在 Linux 中，我将使用 shell 脚本来自动化编译和运行。当然，构建工具使用的肯定是 cmake。
 
-## Part1 算数类型
+那么，就直接看代码吧。
 
-这里我们只去讲如何在程序中使用这些类型，关于其背后的原理，我想，大家会在计算机组成原理中得到详细的解释，当然，如果我有时间的话，可能会出视频讲一下，毕竟，大学里面的老师很有可能会因为课时不足，导致在课堂上也无法讲清楚。
+## Part1 
 
-当然，如果有时间的话，推荐大家去看《深入理解计算机系统(第三版)》这本书，英文名是：Computer Systems: A Programmer's Perspective (3rd Edition)，也就是大名鼎鼎的 CSAPP。就拿浮点数来说，这个是我当时完整看过的，所以能够安心地给出评价，那就是如果你想理解浮点数真正的构造及原理，那么，可以抽空看一下[这本书](https://book.douban.com/subject/26912767)。
+英文原书 p32,
 
-那么，如果仅仅停留在本书需要理解的程度，那么，我们写几行代码就可以了解怎么去使用了，
+```cpp
+#include <iostream>
+
+int main()
+{
+    int i = 1;
+    int j = 2;
+    i = i + j;
+    std::cout << i << std::endl;
+
+    return 0;
+}
+```
+
+个人对英文原书 32 页补充代码，
 
 ```cpp
 #include <iostream>
@@ -82,9 +94,13 @@ int main()
 }
 ```
 
+关于这些基本类型，如果有时间的话，推荐大家去看《深入理解计算机系统(第三版)》这本书，英文名是：Computer Systems: A Programmer's Perspective (3rd Edition)，也就是大名鼎鼎的 CSAPP。就拿浮点数来说，这个是我当时完整看过的，所以能够安心地给出评价，那就是如果你想理解浮点数真正的构造及原理，那么，可以抽空看一下[这本书](https://book.douban.com/subject/26912767)。
+
+那么，如果仅仅停留在本书需要理解的程度，那么，我们就像上面这样写几行代码就可以了解怎么去使用了，
+
 使用微软的 MSVC 编译器运行的结果如下，
 
-```cpp
+```shell
 bool: 1 (size: 1 bytes)
 char: A (size: 1 bytes)
 wchar_t: A (size: 2 bytes)
@@ -99,22 +115,16 @@ double: 3.14 (size: 8 bytes, precision: 15 significant digits)
 long double: 3.1415 (size: 8 bytes, precision: 15 significant digits)
 ```
 
-观察 double 类型，大于书上所说的 10 位有效数字，也就可以理解书上所说，C++ 标准只是规定了尺寸的最小值，各个编译器可以自己再行发挥。
-
-然后关于有符号和无符号类型的区别，大家如果想仔细理解的也可以去看 CSAPP。其他的一些不难理解的细节，比如，书上讲的，
-
-> 通常，float以1个字（32比特）来表示，double以2个字（64比特）来表示，long double以3或4个字（96或128比特）来表示。一般来说，类型float和double分别有7和16个有效位；
-
-不是刚刚才有一个表格说是 6 位和 10 位吗？怎么又变了？**注意**，依然是这个问题，人家表格说的是最小尺寸。
-
-还有 char, signed char 和 unsigned char 的细节问题，这些都是容易理解的、白话一样的内容。
+这里为什么有些尺寸感觉和书上有差异呢？因为书上写的是标准规定的只是最小尺寸，然后在此基础上编译器可以自由发挥。
 
 ## Part2 类型转换
+
+p35,
 
 ```cpp
 #include <iostream>
 
-int main(int argc, char *argv[])
+int main()
 {
     bool b = 42; // b is true
     std::cout << b << std::endl;
@@ -134,10 +144,12 @@ int main(int argc, char *argv[])
 }
 ```
 
+p36_1,
+
 ```cpp
 #include <iostream>
 
-int main(int argc, char *argv[])
+int main()
 {
     int i = 42;
     std::cout << i << std::endl;
@@ -148,6 +160,89 @@ int main(int argc, char *argv[])
 }
 ```
 
-注意，虽然可以进行如此的类型转换，但是实际的使用过程中还是建议按照规范来，尽量不要让程序去做自动的类型转换，因为可能会遇到移植性的问题。
+p36_2,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    unsigned u = 10;
+    int i = -42;
+    std::cout << i + i << std::endl; // prints -84
+    std::cout << u + i << std::endl; // if 32-bit ints, prints 4294967264
+
+    return 0;
+}
+```
+
+这里书上的解释有点问题，英文原版里面是让我们去看上面的案例，这里中文翻译多给了一些解释，但是这个解释不太能够让人理解，我们还是按照上面的取模的解释来。而对于给负数取模，我们可以把其想象成反方向拨动时钟，然后，从 0 到指针之间的距离就是我们所求的取模后的余数。
+
+p37_01,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    unsigned u1 = 42, u2 = 10;
+    std::cout << u1 - u2 << std::endl; // ok: result is 32
+    std::cout << u2 - u1 << std::endl; // ok: but the result will wrap around
+
+    return 0;
+}
+```
+
+p37_02,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    for (int i = 10; i >= 0; --i)
+        std::cout << i << std::endl;
+
+    return 0;
+}
+```
+
+按：这里可以到 1.4.1 节(英文 p13)的练习那里去看一下。
+
+p37_03,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    /*
+    // WRONG: u can never be less than 0; the condition will always succeed
+    for (unsigned u = 10; u >= 0; --u)
+        std::cout << u << std::endl;
+    */
+    return 0;
+}
+```
+
+p37_04,
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    unsigned u = 11; // start the loop one past the first element we want to print
+    while (u > 0)
+    {
+        --u; // decrement first, so that the last iteration will print 0
+        std::cout << u << std::endl;
+    }
+
+    return 0;
+}
+```
+
+## Part3 字面值常量
 
 
