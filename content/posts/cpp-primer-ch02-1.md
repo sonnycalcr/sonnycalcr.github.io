@@ -37,7 +37,7 @@ int main()
 }
 ```
 
-个人对英文原书 32 页补充代码，
+个人对英文原书 32 页补充代码，custom_p32.cpp,
 
 ```cpp
 #include <iostream>
@@ -275,7 +275,7 @@ int main()
     double c = 0.;
     double d = 0e0;
     double e = .001;
-    std::cout << a << ", " << b << ", " << c << ", " << d << e << std::endl;
+    std::cout << a << ", " << b << ", " << c << ", " << d << ", " << e << std::endl;
     return 0;
 }
 ```
@@ -321,7 +321,7 @@ int main()
     std::cout << "Name\tAge" << std::endl;
     std::cout << "\a" << std::endl;
     std::cout << "Hello\vWorld" << std::endl;
-    std::cout << "Helloo\b World";
+    std::cout << "Helloo\b World" << std::endl;
     std::cout << "He said, \"Hello!\"" << std::endl;
     std::cout << "C:\\Program Files" << std::endl;
     std::cout << "What\?" << std::endl;
@@ -411,6 +411,19 @@ int main()
     long double longDoubleValue = 3.14159L;
     std::cout << "Extended-precision floating-point literal: " << longDoubleValue << std::endl;
 
+    return 0;
+}
+```
+
+p41,
+
+```cpp
+#include <iostream>
+
+int main() {
+
+    bool test = false;
+    std::cout << test << std::endl;
     return 0;
 }
 ```
