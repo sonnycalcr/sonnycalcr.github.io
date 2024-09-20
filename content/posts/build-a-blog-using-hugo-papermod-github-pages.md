@@ -968,7 +968,7 @@ params:
 
 其实可能只有两个需要我们去记忆或者说熟悉，
 
-- `hugo new posts/xxxxx.md`
+- `hugo new content content/posts/xxxxx.md`
 - `hugo server`
 
 ## 一些不足
