@@ -10,5 +10,6 @@
   "nativeMenus": false,
   "enabledCssSnippets": [
     "color"
-  ]
+  ],
+  "theme": "obsidian"
 }
