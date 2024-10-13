@@ -1,5 +1,5 @@
 +++
-title = 'Simple Replies to Some Friends Questions About Cs'
+title = '简要回复网友的关于计算机方面的问题'
 date = 2024-10-13T20:23:48+08:00
 categories = []
 tags = ["Bilibili", "CS"]
