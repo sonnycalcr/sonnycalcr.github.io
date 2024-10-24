@@ -2,7 +2,7 @@
 title = '真·自制输入法·打你所想'
 date = 2024-10-24T01:37:54+08:00
 categories = []
-tags = ["Bilibili"]
+tags = ["Bilibili", "输入法", "C++"]
 +++
 
 按规矩，先上链接：<https://github.com/fanlumaster/fcitx5-FanIME>。
