@@ -7,7 +7,7 @@ tags = ["Bilibili", "算法竞赛", "UVa", "算法竞赛入门经典"]
 
 ## 题意
 
-- <https://onlinejudge.org/external/100/10082.pdf>
+- <https://onlinejudge.org/external/3/340.pdf>
 - <https://onlinejudge.org/external/4/401.pdf>
 
 ## 理解分析
